@@ -92,3 +92,8 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Make all links blue */
+a {
+  color: #0000FF; /* Bright blue */
+}
