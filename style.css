@@ -1,7 +1,9 @@
+/* Import additional fancy fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script&family=Great+Vibes&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #FAFAFA; /* Very light neutral background */
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec; /* Light pink background for overall body */
     margin: 0;
     padding: 20px;
     color: #333; /* Default text color */
@@ -9,11 +11,12 @@ body {
 
 /* Header styles */
 header {
-    background: #007ACC; /* Deep blue for professionalism */
-    color: #fff; /* White text for contrast */
+    background: #a7bbc7; /* Light greyish blue for a softer look */
+    color: #fff;
     padding: 15px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: 'Great Vibes', cursive;
 }
 
 /* Banner styles */
@@ -22,30 +25,36 @@ header {
     margin: 20px 0;
 }
 
-/* Headings with border and grey color */
 h1, h2, h3, h4, .section-heading {
-    font-family: 'Pacifico', cursive; /* Fancy font */
+    font-family: 'Pacifico', cursive; /* Fancy font for headings */
     font-size: 36px;
     margin: 10px 0;
-    border: 2px solid #CCC; /* Soft grey border */
+    border: 2px solid #ccc; /* Soft border */
     padding: 10px;
-    background-color: #E8F0F8; /* Light blue-grey background for headings */
+    background-color: #f8bbd0; /* Light pink background for headings */
     border-radius: 8px;
-    color: #222; /* Slightly darker grey for headings */
+    color: #222; /* Darker grey for headings */
 }
 
 /* Sections */
 section {
     margin: 20px 0;
     padding: 20px;
-    background: #FFFFFF; /* White background */
+    background: #e0e0e0; /* Light grey background instead of white */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* About Me paragraph styling */
+#about p {
+    font-family: 'Dancing Script', cursive; /* Fancy script font for the paragraph */
+    font-size: 20px; /* Larger font size */
+    line-height: 1.6;
+}
+
 /* Navigation styles */
 nav {
-    background-color: #007ACC; /* Deep blue matching header */
+    background-color: #a7bbc7; /* Light greyish blue */
     padding: 10px 0;
     text-align: center;
     margin-bottom: 20px;
@@ -66,44 +75,54 @@ nav ul li a {
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
-    color: #F0F0F0; /* Light grey for nav links */
+    color: #4e4e4e; /* Darker grey for nav links */
     transition: color 0.3s;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #FFFFFF; /* White on hover/active for contrast */
+    color: #222; /* Darker text on hover */
     text-decoration: underline;
 }
 
-/* Specific styles for CodeSkulptor links - blue color only */
-#cfu a {
-    color: #007BFF; /* Bootstrap blue for professionalism */
+/* CFU section styling */
+#cfu {
+    text-align: center;
+}
+
+#cfu div {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 8px;
+    background-color: #f9cddc; /* Light pink for container */
+}
+
+/* Go Back button style (for CFU page) */
+.go-back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #a7bbc7;
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s;
+    border-radius: 8px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 18px;
+    transition: background-color 0.3s;
 }
 
-#cfu a:hover {
-    color: #0056b3; /* Darker blue on hover */
-    text-decoration: underline;
+.go-back:hover {
+    background-color: #8899a6;
 }
 
 /* Footer styles */
 footer {
     text-align: center;
     padding: 15px 0;
-    background: #007ACC; /* Deep blue for consistency */
+    background: #a7bbc7;
     color: #fff;
     margin-top: 40px;
     font-size: 14px;
-}
-
-/* Links generally */
-a {
-    color: #007BFF; /* Professional blue */
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #0056b3;
 }
