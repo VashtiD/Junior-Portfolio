@@ -1,6 +1,7 @@
 /* Import additional fancy fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script&family=Great+Vibes&display=swap');
 
+/* Body styling */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #fce4ec; /* Light pink background for overall body */
@@ -17,6 +18,11 @@ header {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     font-family: 'Great Vibes', cursive;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
 /* Banner styles */
