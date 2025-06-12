@@ -6,22 +6,22 @@
   <title>Projects - Vashti Dalchand</title>
   <style>
     /* Import Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script&family=Great+Vibes&family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Montserrat&family=Pacifico&display=swap');
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #e0e0e0; /* Light grey background for the projects page */
+      background-color: #e0e0e0;
       margin: 0;
       padding: 20px;
       color: #333;
     }
 
-    /* "Go Back" button styles */
+    /* "Go Back" button styled like your CFU button */
     .go-back {
       display: inline-block;
-      margin-bottom: 20px;
-      padding: 10px 20px;
-      background-color: #4A90E2; /* Blue button */
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #a7bbc7;
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
@@ -29,65 +29,93 @@
       font-size: 18px;
       transition: background-color 0.3s;
     }
-
     .go-back:hover {
-      background-color: #357ABD; /* Darker blue on hover */
+      background-color: #8899a6;
     }
 
-    /* Headings (h1, h2, etc.) styles */
-    h1, h2, h3, h4, .section-heading {
+    /* Header Style */
+    h1.section-heading {
       font-family: 'Pacifico', cursive;
       font-size: 36px;
-      margin: 10px 0;
-      border: 2px solid #ccc;
-      padding: 10px;
-      background-color: #f8bbd0; /* Light pink background for headings */
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2C3E50;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* Individual Project Card */
+    .project-card {
+      background: #fff;
       border-radius: 8px;
-      color: #4A90E2; /* Blue color for headings */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
 
-    /* Sections background and layout */
-    section {
-      margin: 20px 0;
-      padding: 20px;
-      background: #f5f5f5; /* Slightly darker grey for section background */
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    /* Paragraph styling inside sections */
-    #about p {
-      font-family: 'Dancing Script', cursive;
-      font-size: 20px;
-      line-height: 1.6;
-    }
-
-    /* Embed container styles for Canva */
-    #canva-slide {
-      margin-top: 50px;
-    }
-
-    #canva-slide iframe {
+    /* Media container */
+    .project-media {
       width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 8px;
+      height: 180px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      border-radius: 6px;
     }
-
-    /* Embed container styles for Figma */
-    #app-project {
-      margin-top: 50px;
-    }
-
-    #app-project iframe {
+    .project-media iframe {
       width: 100%;
-      height: 600px;
+      height: 100%;
       border: none;
-      border-radius: 8px;
     }
 
-    /* Additional styles as needed */
+    /* Project Title */
+    .project-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #2C3E50;
+    }
 
+    /* Description */
+    .project-desc {
+      flex-grow: 1;
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+
+    /* View Project Button */
+    .view-project {
+      align-self: center;
+      padding: 10px 15px;
+      background-color: #2980B9;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .view-project:hover {
+      background-color: #1A5A89;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      background-color: #2C3E50;
+      color: #ecf0f1;
+    }
   </style>
 </head>
 <body>
@@ -96,23 +124,44 @@
 
   <h1 class="section-heading">My Projects</h1>
 
-  <!-- Canva Slide Embed -->
-  <section id="canva-slide">
-    <h2>My Canva Slide</h2>
-    <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
-      <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
-        src="https://www.canva.com/design/DAGgrk0zhx4/3ohNTeXspwLeCNDI90d7Ew/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-      </iframe>
+  <!-- Projects Grid -->
+  <div class="projects-grid">
+    <!-- Canva Slide Project -->
+    <div class="project-card">
+      <div class="project-media">
+        <iframe src="https://www.canva.com/design/DAGgrk0zhx4/3ohNTeXspwLeCNDI90d7Ew/view?embed" allowfullscreen></iframe>
+      </div>
+      <div class="project-title">My Canva Slide</div>
+      <div class="project-desc">View my Canva presentation embedded below.</div>
+      <a class="view-project" href="https://www.canva.com/design/DAGgrk0zhx4/3ohNTeXspwLeCNDI90d7Ew/view?utm_content=DAGgrk0zhx4&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank">View on Canva</a>
     </div>
-    <div style="text-align: center; margin-top: 10px;">
-      <a href="https://www.canva.com/design/DAGgrk0zhx4/3ohNTeXspwLeCNDI90d7Ew/view?utm_content=DAGgrk0zhx4&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" style="font-size: 16px; color: #007BFF; text-decoration: none;">Infy</a>
-    </div>
-  </section>
 
-  <!-- Figma App Embed -->
-  <section id="app-project">
-    <h2>My App Project</h2>
-    <iframe style="border: none; width: 100%; height: 600px;" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/bcC6yrZE3m0BBOphdeQgir/PyMasters---Mockup?node-id=236-3&starting-point-node-id=236%3A3"></iframe>
-  </section>
+    <!-- Figma App Project -->
+    <div class="project-card">
+      <div class="project-media">
+        <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/bcC6yrZE3m0BBOphdeQgir/PyMasters---Mockup?node-id=236-3&starting-point-node-id=236%3A3"></iframe>
+      </div>
+      <div class="project-title">My Figma App</div>
+      <div class="project-desc">Explore the mockup of my app project here.</div>
+      <a class="view-project" href="https://www.figma.com/proto/bcC6yrZE3m0BBOphdeQgir/PyMasters---Mockup?node-id=236-3" target="_blank">View Figma</a>
+    </div>
+
+    <!-- Code.org App Project -->
+    <div class="project-card">
+      <div class="project-media">
+        <iframe src="https://studio.code.org/projects/applab/etAU4NFR4glSl_dKvNPFTaD0Zcfc1-uZRAEP15HcQGA/embed?nosource" width="392" height="620" style="border:0px;"></iframe>
+      </div>
+      <div class="project-title">My Code.org App</div>
+      <div class="project-desc">This is my Code.org app embedded below.</div>
+      <a class="view-project" href="https://studio.code.org/projects/applab/etAU4NFR4glSl_dKvNPFTaD0Zcfc1-uZRAEP15HcQGA" target="_blank">View on Code.org</a>
+    </div>
+
+    <!-- Add more project cards as needed -->
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Vashti Dalchand</p>
+  </footer>
 </body>
 </html>
