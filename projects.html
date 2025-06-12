@@ -4,40 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects - Vashti Dalchand</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script&family=Great+Vibes&family=Montserrat&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #e0e0e0; /* Light grey background for the projects page */
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    /* "Go Back" button styles */
+    .go-back {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #4A90E2; /* Blue button */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+
+    .go-back:hover {
+      background-color: #357ABD; /* Darker blue on hover */
+    }
+
+    /* Headings (h1, h2, etc.) styles */
+    h1, h2, h3, h4, .section-heading {
+      font-family: 'Pacifico', cursive;
+      font-size: 36px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      padding: 10px;
+      background-color: #f8bbd0; /* Light pink background for headings */
+      border-radius: 8px;
+      color: #4A90E2; /* Blue color for headings */
+    }
+
+    /* Sections background and layout */
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      background: #f5f5f5; /* Slightly darker grey for section background */
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Paragraph styling inside sections */
+    #about p {
+      font-family: 'Dancing Script', cursive;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    /* Embed container styles for Canva */
+    #canva-slide {
+      margin-top: 50px;
+    }
+
+    #canva-slide iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    /* Embed container styles for Figma */
+    #app-project {
+      margin-top: 50px;
+    }
+
+    #app-project iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    /* Additional styles as needed */
+
+  </style>
 </head>
 <body>
-  <header>
-    <h1>My Projects</h1>
-  </header>
+  <!-- "Go Back" Button -->
+  <a href="index.html" class="go-back">Go Back</a>
 
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <!-- Add more links if needed -->
-    </ul>
-  </nav>
+  <h1 class="section-heading">My Projects</h1>
 
-  <section>
-    <div class="projects-grid">
-      <!-- Example project card -->
-      <div class="project-card">
-        <h3>Canva Slide</h3>
-        <p>View my Canva presentation embedded below.</p>
-        <a class="project-link" href="https://www.canva.com/design/DAGgrk0zhx4/3ohNTeXspwLeCNDI90d7Ew/view?utm_content=DAGgrk0zhx4&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank">View on Canva</a>
-        <!-- Embed -->
-        <div style="margin-top:15px;">
-          <iframe src="https://www.canva.com/design/DAGgrk0zhx4/3ohNTeXspwLeCNDI90d7Ew/view?embed" style="width:100%; height:300px; border:1px solid #ccc; border-radius:8px;" allowfullscreen></iframe>
-        </div>
-      </div>
-      
-      <!-- Add more project cards as needed -->
-      
+  <!-- Canva Slide Embed -->
+  <section id="canva-slide">
+    <h2>My Canva Slide</h2>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+      <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
+        src="https://www.canva.com/design/DAGgrk0zhx4/3ohNTeXspwLeCNDI90d7Ew/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+      </iframe>
+    </div>
+    <div style="text-align: center; margin-top: 10px;">
+      <a href="https://www.canva.com/design/DAGgrk0zhx4/3ohNTeXspwLeCNDI90d7Ew/view?utm_content=DAGgrk0zhx4&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" style="font-size: 16px; color: #007BFF; text-decoration: none;">Infy</a>
     </div>
   </section>
 
-  <footer>
-    <a href="index.html" class="go-back">Go Back</a>
-  </footer>
+  <!-- Figma App Embed -->
+  <section id="app-project">
+    <h2>My App Project</h2>
+    <iframe style="border: none; width: 100%; height: 600px;" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/bcC6yrZE3m0BBOphdeQgir/PyMasters---Mockup?node-id=236-3&starting-point-node-id=236%3A3"></iframe>
+  </section>
 </body>
 </html>
